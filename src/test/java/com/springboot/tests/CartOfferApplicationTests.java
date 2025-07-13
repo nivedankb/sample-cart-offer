@@ -1,8 +1,7 @@
-package com.springboot;
+package com.springboot.tests;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.springboot.controller.OfferRequest;
-import com.springboot.controller.SegmentResponse;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -10,7 +9,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.io.BufferedReader;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
