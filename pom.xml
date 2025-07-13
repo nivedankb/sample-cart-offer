@@ -47,8 +47,48 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>1.16.22</version>
+			<version>1.18.30</version>
 			<scope>provided</scope>
+		</dependency>
+		
+		<!-- REST Assured for API Testing - Updated for Java 11 compatibility -->
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<version>5.3.0</version>
+			<scope>test</scope>
+		</dependency>
+		
+		<!-- TestNG for better test management -->
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>7.4.0</version>
+			<scope>test</scope>
+		</dependency>
+		
+		<!-- JSON Path for REST Assured -->
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>json-path</artifactId>
+			<version>5.3.0</version>
+			<scope>test</scope>
+		</dependency>
+		
+		<!-- XML Path for REST Assured -->
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>xml-path</artifactId>
+			<version>5.3.0</version>
+			<scope>test</scope>
+		</dependency>
+		
+		<!-- Hamcrest for better assertions -->
+		<dependency>
+			<groupId>org.hamcrest</groupId>
+			<artifactId>hamcrest</artifactId>
+			<version>2.2</version>
+			<scope>test</scope>
 		</dependency>
 
 	</dependencies>

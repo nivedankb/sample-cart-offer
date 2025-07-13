@@ -5,11 +5,193 @@
         "path" : "/api/v1/user_segment",
         "queryStringParameters" : {
           "user_id" : ["1"]
-      }
-    },
+        }
+      },
       "httpResponse" : {
         "body" : "{\"segment\": \"p1\"}",
         "statusCode": 200
+      }
+    },
+    {
+      "httpRequest" : {
+        "method" : "GET",
+        "path" : "/api/v1/user_segment",
+        "queryStringParameters" : {
+          "user_id" : ["2"]
+        }
+      },
+      "httpResponse" : {
+        "body" : "{\"segment\": \"p2\"}",
+        "statusCode": 200
+      }
+    },
+    {
+      "httpRequest" : {
+        "method" : "GET",
+        "path" : "/api/v1/user_segment",
+        "queryStringParameters" : {
+          "user_id" : ["3"]
+        }
+      },
+      "httpResponse" : {
+        "body" : "{\"segment\": \"p3\"}",
+        "statusCode": 200
+      }
+    },
+    {
+      "httpRequest" : {
+        "method" : "GET",
+        "path" : "/api/v1/user_segment",
+        "queryStringParameters" : {
+          "user_id" : ["4"]
+        }
+      },
+      "httpResponse" : {
+        "body" : "{\"segment\": \"p1\"}",
+        "statusCode": 200
+      }
+    },
+    {
+      "httpRequest" : {
+        "method" : "GET",
+        "path" : "/api/v1/user_segment",
+        "queryStringParameters" : {
+          "user_id" : ["5"]
+        }
+      },
+      "httpResponse" : {
+        "body" : "{\"segment\": \"p2\"}",
+        "statusCode": 200
+      }
+    },
+    {
+      "httpRequest" : {
+        "method" : "GET",
+        "path" : "/api/v1/user_segment",
+        "queryStringParameters" : {
+          "user_id" : ["6"]
+        }
+      },
+      "httpResponse" : {
+        "body" : "{\"segment\": \"p3\"}",
+        "statusCode": 200
+      }
+    },
+    {
+      "httpRequest" : {
+        "method" : "GET",
+        "path" : "/api/v1/user_segment",
+        "queryStringParameters" : {
+          "user_id" : ["7"]
+        }
+      },
+      "httpResponse" : {
+        "body" : "{\"segment\": \"p1\"}",
+        "statusCode": 200
+      }
+    },
+    {
+      "httpRequest" : {
+        "method" : "GET",
+        "path" : "/api/v1/user_segment",
+        "queryStringParameters" : {
+          "user_id" : ["8"]
+        }
+      },
+      "httpResponse" : {
+        "body" : "{\"segment\": \"p2\"}",
+        "statusCode": 200
+      }
+    },
+    {
+      "httpRequest" : {
+        "method" : "GET",
+        "path" : "/api/v1/user_segment",
+        "queryStringParameters" : {
+          "user_id" : ["9"]
+        }
+      },
+      "httpResponse" : {
+        "body" : "{\"segment\": \"p3\"}",
+        "statusCode": 200
+      }
+    },
+    {
+      "httpRequest" : {
+        "method" : "GET",
+        "path" : "/api/v1/user_segment",
+        "queryStringParameters" : {
+          "user_id" : ["10"]
+        }
+      },
+      "httpResponse" : {
+        "body" : "{\"segment\": \"p1\"}",
+        "statusCode": 200
+      }
+    },
+    {
+      "httpRequest" : {
+        "method" : "GET",
+        "path" : "/api/v1/user_segment",
+        "queryStringParameters" : {
+          "user_id" : ["0"]
+        }
+      },
+      "httpResponse" : {
+        "body" : "{\"error\": \"Invalid user ID\"}",
+        "statusCode": 400
+      }
+    },
+    {
+      "httpRequest" : {
+        "method" : "GET",
+        "path" : "/api/v1/user_segment",
+        "queryStringParameters" : {
+          "user_id" : ["-1"]
+        }
+      },
+      "httpResponse" : {
+        "body" : "{\"error\": \"Invalid user ID\"}",
+        "statusCode": 400
+      }
+    },
+    {
+      "httpRequest" : {
+        "method" : "GET",
+        "path" : "/api/v1/user_segment",
+        "queryStringParameters" : {
+          "user_id" : ["999"]
+        }
+      },
+      "httpResponse" : {
+        "body" : "{\"error\": \"User not found\"}",
+        "statusCode": 404
+      }
+    },
+    {
+      "httpRequest" : {
+        "method" : "GET",
+        "path" : "/api/v1/user_segment",
+        "queryStringParameters" : {
+          "user_id" : ["1000"]
+        }
+      },
+      "httpResponse" : {
+        "body" : "{\"error\": \"User not found\"}",
+        "statusCode": 404
+      }
+    },
+    {
+      "httpRequest" : {
+        "method" : "GET",
+        "path" : "/api/v1/user_segment",
+        "queryStringParameters" : {
+          "user_id" : ["500"]
+        }
+      },
+      "httpResponse" : {
+        "body" : "{\"error\": \"Internal server error\"}",
+        "statusCode": 500
       }
     }
   ]

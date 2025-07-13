@@ -24,6 +24,12 @@ public class AutowiredController {
 	@PostMapping(path = "/api/v1/offer")
 	public ApiResponse postOperation(@RequestBody OfferRequest offerRequest) {
 		System.out.println(offerRequest);
+		
+		String validationError = validateOfferRequest(offerRequest);
+		if (validationError != null) {
+			return new ApiResponse(validationError);
+		}
+		
 		allOffers.add(offerRequest);
 		return new ApiResponse("success");
 	}
@@ -50,6 +56,41 @@ public class AutowiredController {
 
 		}
 		return new ApplyOfferResponse(cartVal);
+	}
+
+	private String validateOfferRequest(OfferRequest offerRequest) {
+		if (offerRequest == null) {
+			return "error: Offer request cannot be null";
+		}
+		
+		if (offerRequest.getRestaurant_id() <= 0) {
+			return "error: Restaurant ID must be positive";
+		}
+		
+		if (offerRequest.getOffer_type() == null || offerRequest.getOffer_type().trim().isEmpty()) {
+			return "error: Offer type cannot be empty";
+		}
+		
+		if (!offerRequest.getOffer_type().equals("FLATX") && !offerRequest.getOffer_type().equals("PERCENTAGE")) {
+			return "error: Offer type must be FLATX or PERCENTAGE";
+		}
+		
+		if (offerRequest.getOffer_value() < 0) {
+			return "error: Offer value cannot be negative";
+		}
+		
+		if (offerRequest.getCustomer_segment() == null || offerRequest.getCustomer_segment().isEmpty()) {
+			return "error: Customer segment cannot be empty";
+		}
+		
+		// Validate customer segments
+		for (String segment : offerRequest.getCustomer_segment()) {
+			if (!segment.equals("p1") && !segment.equals("p2") && !segment.equals("p3")) {
+				return "error: Invalid customer segment. Must be p1, p2, or p3";
+			}
+		}
+		
+		return null;
 	}
 
 	private SegmentResponse getSegmentResponse(int userid)
